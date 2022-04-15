@@ -1,14 +1,20 @@
 /* You're welcome to change any of this! */
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;600&display=swap');
+</style>
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    margin: 0px;
-    font-family: Arial, sans-serif;
+    margin: 10px;
+    font-family: 'Mali', cursive;
+    
 }
 header, section {
     padding: 20px;
+    font-family: 'Mali', cursive;
 }
 p, li {
     line-height: 1.5em;
