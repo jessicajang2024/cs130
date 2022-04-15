@@ -8,7 +8,7 @@
 }
 
 body {
-    margin: 10px;
+    margin: 20px;
     font-family: 'Mali', cursive;
     background-color: #F3B3A6
     
@@ -16,13 +16,15 @@ body {
 header, section {
     padding: 20px;
     font-family: 'Mali', cursive;
+    font-weight: bold;
+    word-spacing: 10px;
 }
 p, li {
-    line-height: 1.5em;
+    line-height: 2.5em;
 }
 
 #inspiration {
-    background-color: #F0F0F0;
+    background-color: #E9FAE3;
     padding-top: 40px;
     padding-bottom: 40px;
 }
