@@ -34,10 +34,19 @@ body {
 /* Task 2 */
 
 .task-2.container {
+  border: solid #444 10px;    /* helps us see the box that is split into 12 column grid */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr /* we want 6 columns that are equal in width*/
 }
 
 .task-2 .item-1 {
+  grid-column-start: 3;
+  grid-column-end: 6;
 }
 
 .task-2 .item-2 {
+  
+  grid-column-start: 7;
+  grid-column-end: 11;
+  /* or grid-column-end: span 5;
 }

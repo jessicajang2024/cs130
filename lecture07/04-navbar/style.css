@@ -4,7 +4,7 @@ html {
 
 body * {
     box-sizing: border-box;
-    border: solid 1px #000;
+    border: solid 1px #000;    /* to see where the boundaries of each element are */
     margin: 10px;
 }
 
@@ -20,5 +20,5 @@ nav {
 
 ul {
     display:flex;
-    list-style: none; /* instead of bullet list*/ß
+    list-style: none; /*removes bullets from list*/
 }

@@ -33,6 +33,11 @@ body {
 /* Task 1 */
 
 .task-1.container {
+  display: grid;
+  grid-template-rows: 50px auto 50px;
+  /* we don't know how much content/text there will be and want the boxes to be flexible  */
+  /* instead of ~~px, just put auto */
+
     
 }
 
