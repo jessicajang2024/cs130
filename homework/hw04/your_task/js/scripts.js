@@ -39,7 +39,9 @@ const getTracks = (term) => {
 const track2Html = (track) => {
     return `
       <button class="track-item preview" data-preview-track=${track.preview_url} onclick="handleTrackClick(event);">
-              <img src=${track.album.image_url}>
+              <img 
+                src=${track.album.image_url}
+                alt="Image of Track Album">
               <i class="fas play-track fa-play" aria-hidden="true"></i>
               <div class="label">
                   <h2>${track.album.name}</h2>
@@ -51,13 +53,42 @@ const track2Html = (track) => {
       `;
   };
 
-
-
 const getAlbums = (term) => {
-    console.log(`
-        get albums from spotify based on the search term
-        "${term}" and load them into the #albums section 
-        of the DOM...`);
+    let url = `https://www.apitutor.org/spotify/simple/v1/search?type=album&q=${term}`;
+    fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.length > 0) {
+                let firstFive = data.splice(0, 5);
+                console.log(firstFive[0]);
+
+                // convert to HTML
+                let html = firstFive.map(album2Html);
+                // plug it back into the index.html file
+                document.querySelector("#albums").innerHTML = html;
+            } else {
+                let html = "<p>No albums found that match your seach criteria.</p>";
+                document.querySelector("#albums").innerHTML = html;
+            }
+        });
+};
+
+const album2Html = (album) => {
+    return `
+    <section class="album-card" id=${album.id}>
+    <div>
+        <img 
+        src=${album.image_url}
+        alt="Image of Album"
+        >
+        <h2>${album.name}</h2>
+        <div class="footer">
+            <a href=${album.spotify_url} target="_blank">
+                view on spotify
+            </a>
+        </div>
+    </div>
+</section> `;
 };
 
 const getArtist = (term) => {
@@ -83,7 +114,9 @@ const artist2Html = (artist) => {
     return `
     <section class="artist-card" id=${artist.id}>
     <div>
-        <img src=${artist.image_url}>
+        <img 
+        src=${artist.image_url}
+        alt = "Image of artist">
         <h2>${artist.name}</h2>
         <div class="footer">
             <a href=${artist.spotify_url} target="_blank">
@@ -98,6 +131,8 @@ const artist2Html = (artist) => {
 const handleTrackClick = (ev) => {
   const previewUrl = ev.currentTarget.getAttribute("data-preview-track");
   console.log(previewUrl);
+  let audio_url = audioPlayer.setAudioFile(previewUrl);
+    audioPlayer.play();
 };
 
 document.querySelector('#search').onkeyup = (ev) => {
