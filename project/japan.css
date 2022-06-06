@@ -1,0 +1,143 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:300, 400, 700);
+
+body {
+    margin: 0px;
+}
+.navbar {
+  padding: 20px;
+  background-color: #F0F0F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar a, .navbar strong {
+  margin-right: 15px;
+}
+p, h1, h2, h3, h4, h5 {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+section {
+    padding-bottom: 50px;
+}
+#main {
+  width: 100%;
+  padding: 0;
+}
+.content-asset p {
+  margin: 0 auto;
+}
+.breadcrumb {
+  display: none;
+}
+
+/* Helpers */
+
+.margin-top-10 {
+  padding-top: 10px;
+}
+.margin-bot-10 {
+  padding-bottom: 10px;
+}
+
+/* Typography */
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 70px;
+  letter-spacing: 10px;
+  text-align: center;
+  color: black;
+  font-weight: 400;
+  /* text-transform: uppercase; */
+  z-index: 10;
+  opacity: 0.8;
+}
+h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 0;
+  font-weight: 400;
+  letter-spacing: 8px;
+  /* text-transform: uppercase; */
+  color: black;
+}
+p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+}
+.first-character {
+  font-weight: 400;
+  float: left;
+  font-size: 84px;
+  line-height: 64px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.sc {
+  color: #ff0000;
+}
+.ny {
+  color: #black;
+}
+.atw {
+  color: #ff0000;
+}
+
+/* Section - Title */
+
+.title {
+  background: white;
+  padding: 60px;
+  margin: 0 auto;
+  text-align: center;
+}
+.title h1 {
+  font-size: 35px;
+  letter-spacing: 8px;
+}
+
+
+Main point of this exercise
+.parallax-one, .parallax-two, .parallax-three {
+    border: solid 1px #000;
+    /*padding-top: 200px;
+    padding-bottom: 200px;*/
+    height: 600px;
+    width: 100%;
+    align-items: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    /* filter: grayscale(100%); */
+    https://www.w3schools.com/cssref/css3_pr_filter.asp
+}
+
+
+
+.parallax-one {
+  background-image: url(https://media.istockphoto.com/photos/flag-of-japan-blowing-in-the-wind-picture-id1217765787?k=20&m=1217765787&s=612x612&w=0&h=gKGrAQ0vj9BmDr0BlXbXgS1zXOm0eP378x71HuKK-zA=);
+}
+
+.parallax-two {
+  background-image: url(https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/01/a0001976/img/basic/a0001976_main.jpg);
+}
+
+.parallax-three {
+  background-image: url(https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2018/10/Byodoin-Temple-800x500.jpg);
+}
